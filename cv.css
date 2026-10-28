@@ -1,0 +1,230 @@
+/* 1. Pengaturan dasar */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #e6e9ee;
+}
+
+/* 2. Kertas CV */
+body {
+  width: min(100% - 32px, 860px);
+  margin: 24px auto;
+  padding: 40px 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333333;
+  background-color: #ffffff;
+  border: 1px solid #cfd5dd;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgb(15 23 42 / 8%);
+}
+
+/* 3. Header dan navigasi */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+  border-bottom: 4px solid #1f3a5f;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+  color: #1f3a5f;
+}
+
+header p {
+  margin: 4px 0 0;
+  font-size: 16px;
+  color: #5a6675;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+
+.nav-links a {
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #3b82c4;
+  text-decoration: underline;
+}
+
+/* 4. Judul bagian */
+section {
+  margin-bottom: 28px;
+}
+
+h2 {
+  margin: 0 0 12px;
+  padding-bottom: 5px;
+  font-size: 18px;
+  color: #1f3a5f;
+  border-bottom: 1px solid #1f3a5f;
+}
+
+/* 5. Tabel */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.table-wrapper table {
+  min-width: 520px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+caption {
+  padding-bottom: 6px;
+  text-align: left;
+  font-size: 13px;
+  font-style: italic;
+  color: #7a8594;
+}
+
+th,
+td {
+  padding: 8px 10px;
+  text-align: left;
+  border-bottom: 1px solid #dde2e9;
+}
+
+thead th {
+  background-color: #eef2f7;
+  color: #1f3a5f;
+  border-bottom: 2px solid #1f3a5f;
+}
+
+.nomor {
+  width: 45px;
+  text-align: center;
+}
+
+/* 6. Biodata (foto + tabel) */
+.biodata-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.foto {
+  flex-shrink: 0;
+  width: 150px;
+  height: auto;
+  padding: 3px;
+  border: 2px solid #1f3a5f;
+  border-radius: 8px;
+}
+
+.biodata {
+  flex: 1;
+}
+
+.biodata th {
+  width: 35%;
+  color: #1f3a5f;
+}
+
+/* 7. Link */
+a {
+  color: #1f3a5f;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #3b82c4;
+}
+
+/* 8. Footer */
+footer {
+  margin-top: 20px;
+  padding-top: 12px;
+  text-align: center;
+  border-top: 1px solid #cfd5dd;
+}
+
+footer p {
+  margin: 0;
+  font-size: 13px;
+  color: #7a8594;
+}
+
+/* 9. Responsive: tablet */
+@media (max-width: 768px) {
+  body {
+    padding: 30px 28px;
+  }
+
+  header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .biodata-layout {
+    gap: 18px;
+  }
+
+  .foto {
+    width: 130px;
+  }
+}
+
+/* 10. Responsive: ponsel */
+@media (max-width: 480px) {
+  body {
+    width: min(100% - 16px, 860px);
+    margin: 8px auto;
+    padding: 20px 16px;
+  }
+
+  header h1 {
+    font-size: 22px;
+  }
+
+  header p {
+    font-size: 14px;
+  }
+
+  .nav-links {
+    gap: 6px 12px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  .biodata-layout {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .biodata {
+    width: 100%;
+  }
+
+  .biodata th {
+    width: 40%;
+  }
+
+  th,
+  td {
+    padding: 6px 8px;
+    font-size: 13px;
+  }
+}
